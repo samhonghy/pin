@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <style type="text/css">
+      .left {
+        width: 20%;
+        float: left;
+      }
+
+      .left .slide {
+        height: 400px;
+        background-color: #ccc ;
+      }
+
+      .left img {
+        width: 200px;
+      }
+
+      .right {
+        width: 80%;
+        float: left;
+      }
+
+      .right img {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+        <div class="slide">
+          <img src="alipay.jpg">
+        </div>
+      </div>
+      <div class="right">
+        <img src="ntk98728.jpg">
+        <img src="ntk98728.jpg">
+        <img src="ntk98728.jpg">
+        <img src="ntk98728.jpg">
+      </div>
+    </div>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="pin.js"></script>
+    <script type="text/javascript">
+      (function(){
+        /*$(".left img").pin({
+          top: 50
+        });*/
+
+        $(".left img").pin({
+          top: 50,
+          container: ".slide",
+          bottom: 10
+        });
+      })(jQuery);
+    </script>
+  </body>
+</html>
