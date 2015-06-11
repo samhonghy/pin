@@ -37,6 +37,12 @@
       // 重新定位位置
       onScroll();
     };
+
+    function leftAdjust(){
+      if($nav.offset().left > $container.offset().left){
+        $nav.css("left", originalLeft - ($nav.offset().left - $container.offset().left));
+      }
+    }
     
     function onScroll(){
       if(document.body.scrollTop > originalTop - settings.top) {
@@ -60,6 +66,7 @@
           $nav.removeClass(settings.activeClass);
         }
       }
+      leftAdjust();
     }
     
     calculatePosition();
