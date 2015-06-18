@@ -13,3 +13,4 @@ $(DOM).pin({
   container: "selector", // 其父级中的一个，DOM元素只会在这个container中活动
   bottom: 20 // 距离底部的距离，小于这个距离就会停止
 })
+   
